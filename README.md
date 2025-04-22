@@ -1,4 +1,4 @@
-# Gemini Studio
+# Prompt Copilot
 
 A Google AI Studio clone built with React, TypeScript, Redux Toolkit, and Tailwind CSS.
 

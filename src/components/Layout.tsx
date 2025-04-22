@@ -59,7 +59,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="flex-1 flex items-center justify-between">
             {!apiKey && (
               <div className="text-sm text-red-400 ml-2">
-                Please set your API key to start using Gemini Studio
+                Please set your API key to start using Prompt Copilot
               </div>
             )}
           </div>
