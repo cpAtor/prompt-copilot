@@ -37,6 +37,14 @@ const ChatInterface = () => {
         maxOutputTokens: currentConversation.runSettings.maxOutputTokens,
       };
 
+      // If there's a system prompt, send it first
+      if (currentConversation.systemPrompt) {
+        await model.generateContent({
+          contents: [{ role: 'system', parts: [{ text: currentConversation.systemPrompt }] }],
+          generationConfig,
+        });
+      }
+
       const result = await model.generateContent({
         contents: [{ role: 'user', parts: [{ text: input }] }],
         generationConfig,
